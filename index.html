@@ -90,21 +90,10 @@
       display: block;
     }
 
-    .stars {
-      display: flex;
-      justify-content: center;
-      gap: 4px;
+    .rating {
       margin-top: 8px;
-    }
-
-    .star {
-      font-size: 20px;
-      cursor: pointer;
-      color: #888;
-    }
-
-    .star.selected {
       color: gold;
+      font-size: 18px;
     }
 
     @media (max-width: 500px) {
@@ -129,7 +118,40 @@
   </header>
 
   <div id="ai-sections">
-    <!-- Nội dung sẽ được chèn ở đây -->
+    <!-- Đặt vấn đề -->
+    <div class="section" data-section="đặt vấn đề">
+      <div class="section-title">🧠 Đặt vấn đề</div>
+      <div class="ai-container">
+        <div class="ai-card" data-name="chatgpt">
+          <a href="https://chat.openai.com/" target="_blank">
+            <img src="https://logo.clearbit.com/openai.com" alt="ChatGPT" />
+            ChatGPT
+          </a>
+          <div class="rating">⭐⭐⭐⭐⭐</div>
+        </div>
+        <div class="ai-card" data-name="grok">
+          <a href="https://grok.com" target="_blank">
+            <img src="https://play-lh.googleusercontent.com/dQRKhi30KpzG3gww3TdVLzyIAVuOAWylnAcgnEUxqfpm2A8dEt2sgApVvtKAy-DO8aI=w240-h480-rw" alt="Grok" />
+            Grok AI
+          </a>
+          <div class="rating">⭐⭐⭐⭐</div>
+        </div>
+        <div class="ai-card" data-name="deepseek">
+          <a href="https://chat.deepseek.com/" target="_blank">
+            <img src="https://downloadr2.apkmirror.com/wp-content/uploads/2025/01/99/678773c147230_com.deepseek.chat.png" alt="DeepSeek AI" />
+            DeepSeek AI
+          </a>
+          <div class="rating">⭐⭐⭐⭐</div>
+        </div>
+        <div class="ai-card" data-name="aistudio">
+          <a href="https://aistudio.google.com/prompts/new_chat" target="_blank">
+            <img src="https://logo.clearbit.com/google.com" alt="AI Studio" />
+            AI Studio
+          </a>
+          <div class="rating">⭐⭐⭐</div>
+        </div>
+      </div>
+    </div>
   </div>
 
   <script>
@@ -153,31 +175,6 @@
         });
 
         section.style.display = sectionVisible ? "block" : "none";
-      });
-    });
-
-    // Tạo đánh giá sao có thể chọn được
-    document.addEventListener("DOMContentLoaded", () => {
-      document.querySelectorAll('.ai-card').forEach(card => {
-        const ratingDiv = document.createElement('div');
-        ratingDiv.className = 'stars';
-
-        for (let i = 1; i <= 5; i++) {
-          const star = document.createElement('span');
-          star.className = 'star';
-          star.textContent = '★';
-
-          star.addEventListener('click', () => {
-            const stars = ratingDiv.querySelectorAll('.star');
-            stars.forEach((s, index) => {
-              s.classList.toggle('selected', index < i);
-            });
-          });
-
-          ratingDiv.appendChild(star);
-        }
-
-        card.appendChild(ratingDiv);
       });
     });
   </script>
