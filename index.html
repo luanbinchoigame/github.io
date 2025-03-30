@@ -8,7 +8,6 @@
     * {
       box-sizing: border-box;
     }
-
     body {
       font-family: 'Segoe UI', sans-serif;
       background: #1e1e2f;
@@ -16,97 +15,80 @@
       margin: 0;
       padding: 0;
     }
-
     header {
       background-color: #2c2c3e;
-      padding: 24px;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+      padding: 20px;
       text-align: center;
     }
-
     header h1 {
       margin: 0;
-      font-size: 28px;
+      font-size: 24px;
       color: #fff;
     }
-
     #searchBox {
-      margin-top: 16px;
-      width: 90%;
-      max-width: 400px;
-      padding: 12px 16px;
-      font-size: 16px;
-      border-radius: 10px;
-      border: 1px solid #555;
+      margin-top: 12px;
+      width: 100%;
+      max-width: 360px;
+      padding: 10px;
+      font-size: 15px;
+      border-radius: 8px;
+      border: none;
       background: #333;
       color: #fff;
     }
-
     .section {
-      padding: 30px 20px;
+      padding: 24px 16px;
     }
-
     .section-title {
-      font-size: 22px;
-      font-weight: 600;
-      margin-bottom: 20px;
+      font-size: 20px;
+      margin-bottom: 16px;
       color: #ffcb6b;
       text-align: center;
     }
-
     .ai-container {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 16px;
       max-width: 960px;
-      margin: 0 auto;
+      margin: auto;
     }
-
     .ai-card {
       background-color: #2c2c3e;
-      border-radius: 12px;
-      padding: 16px;
+      border-radius: 10px;
+      padding: 12px;
       text-align: center;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
-      transition: transform 0.2s ease;
+      transition: transform 0.2s;
     }
-
     .ai-card:hover {
-      transform: translateY(-5px);
+      transform: translateY(-4px);
     }
-
     .ai-card img {
-      width: 60px;
-      height: 60px;
+      width: 50px;
+      height: 50px;
       object-fit: cover;
-      border-radius: 12px;
-      margin-bottom: 12px;
+      border-radius: 10px;
+      margin-bottom: 8px;
     }
-
     .ai-card a {
       color: #ffcb6b;
-      font-weight: bold;
+      font-weight: 500;
+      font-size: 14px;
       text-decoration: none;
-      display: block;
     }
-
     .rating {
-      margin-top: 8px;
+      margin-top: 4px;
+      font-size: 16px;
       color: gold;
-      font-size: 18px;
     }
-
     @media (max-width: 500px) {
       header h1 {
-        font-size: 22px;
+        font-size: 20px;
       }
-
       #searchBox {
-        font-size: 14px;
+        font-size: 13px;
       }
-
       .section-title {
-        font-size: 18px;
+        font-size: 16px;
       }
     }
   </style>
@@ -116,9 +98,7 @@
     <h1>📚 Kho Tàng Công Cụ AI</h1>
     <input type="text" id="searchBox" placeholder="🔍 Nhập tên AI hoặc mục để tìm...">
   </header>
-
   <div id="ai-sections">
-    <!-- Đặt vấn đề -->
     <div class="section" data-section="đặt vấn đề">
       <div class="section-title">🧠 Đặt vấn đề</div>
       <div class="ai-container">
@@ -153,27 +133,21 @@
       </div>
     </div>
   </div>
-
   <script>
     const searchBox = document.getElementById("searchBox");
     const sections = document.querySelectorAll(".section");
-
     searchBox.addEventListener("input", function () {
       const keyword = this.value.toLowerCase();
-
       sections.forEach(section => {
         const sectionName = section.getAttribute("data-section");
         const cards = section.querySelectorAll(".ai-card");
-
         let sectionVisible = false;
-
         cards.forEach(card => {
           const aiName = card.getAttribute("data-name");
           const match = aiName.includes(keyword) || sectionName.includes(keyword);
           card.style.display = match ? "block" : "none";
           if (match) sectionVisible = true;
         });
-
         section.style.display = sectionVisible ? "block" : "none";
       });
     });
