@@ -8,6 +8,7 @@
     * {
       box-sizing: border-box;
     }
+
     body {
       font-family: 'Segoe UI', sans-serif;
       background: #1e1e2f;
@@ -15,80 +16,97 @@
       margin: 0;
       padding: 0;
     }
+
     header {
       background-color: #2c2c3e;
-      padding: 20px;
+      padding: 24px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
       text-align: center;
     }
+
     header h1 {
       margin: 0;
-      font-size: 24px;
+      font-size: 28px;
       color: #fff;
     }
+
     #searchBox {
-      margin-top: 12px;
-      width: 100%;
-      max-width: 360px;
-      padding: 10px;
-      font-size: 15px;
-      border-radius: 8px;
-      border: none;
+      margin-top: 16px;
+      width: 90%;
+      max-width: 400px;
+      padding: 12px 16px;
+      font-size: 16px;
+      border-radius: 10px;
+      border: 1px solid #555;
       background: #333;
       color: #fff;
     }
+
     .section {
-      padding: 24px 16px;
+      padding: 30px 20px;
     }
+
     .section-title {
-      font-size: 20px;
-      margin-bottom: 16px;
+      font-size: 22px;
+      font-weight: 600;
+      margin-bottom: 20px;
       color: #ffcb6b;
       text-align: center;
     }
+
     .ai-container {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-      gap: 16px;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 20px;
       max-width: 960px;
-      margin: auto;
+      margin: 0 auto;
     }
+
     .ai-card {
       background-color: #2c2c3e;
-      border-radius: 10px;
-      padding: 12px;
+      border-radius: 12px;
+      padding: 16px;
       text-align: center;
-      transition: transform 0.2s;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+      transition: transform 0.2s ease;
     }
+
     .ai-card:hover {
-      transform: translateY(-4px);
+      transform: translateY(-5px);
     }
+
     .ai-card img {
-      width: 50px;
-      height: 50px;
+      width: 60px;
+      height: 60px;
       object-fit: cover;
-      border-radius: 10px;
-      margin-bottom: 8px;
+      border-radius: 12px;
+      margin-bottom: 12px;
     }
+
     .ai-card a {
       color: #ffcb6b;
-      font-weight: 500;
-      font-size: 14px;
+      font-weight: bold;
       text-decoration: none;
+      display: block;
     }
+
     .rating {
-      margin-top: 4px;
-      font-size: 16px;
+      margin-top: 8px;
       color: gold;
+      font-size: 18px;
     }
+
     @media (max-width: 500px) {
       header h1 {
-        font-size: 20px;
+        font-size: 22px;
       }
+
       #searchBox {
-        font-size: 13px;
+        font-size: 14px;
       }
+
       .section-title {
-        font-size: 16px;
+        font-size: 18px;
       }
     }
   </style>
@@ -98,7 +116,9 @@
     <h1>📚 Kho Tàng Công Cụ AI</h1>
     <input type="text" id="searchBox" placeholder="🔍 Nhập tên AI hoặc mục để tìm...">
   </header>
+
   <div id="ai-sections">
+    <!-- Đặt vấn đề -->
     <div class="section" data-section="đặt vấn đề">
       <div class="section-title">🧠 Đặt vấn đề</div>
       <div class="ai-container">
@@ -132,22 +152,119 @@
         </div>
       </div>
     </div>
+
+    <!-- Làm hình ảnh -->
+    <div class="section" data-section="làm hình ảnh">
+      <div class="section-title">🖼️ Làm hình ảnh</div>
+      <div class="ai-container">
+        <div class="ai-card" data-name="midjourney">
+          <a href="https://www.midjourney.com/" target="_blank">
+            <img src="https://logo.clearbit.com/midjourney.com" alt="Midjourney" />
+            Midjourney
+          </a>
+          <div class="rating">⭐⭐⭐⭐⭐</div>
+        </div>
+        <div class="ai-card" data-name="sora">
+          <a href="https://openai.com/sora" target="_blank">
+            <img src="https://logo.clearbit.com/openai.com" alt="Sora" />
+            Sora
+          </a>
+          <div class="rating">⭐⭐⭐⭐</div>
+        </div>
+        <div class="ai-card" data-name="reveart">
+          <a href="https://preview.reve.art/app" target="_blank">
+            <img src="https://logo.clearbit.com/reve.art" alt="ReveArt" />
+            ReveArt
+          </a>
+          <div class="rating">⭐⭐⭐</div>
+        </div>
+        <div class="ai-card" data-name="aistudio">
+          <a href="https://aistudio.google.com/prompts/new_chat" target="_blank">
+            <img src="https://logo.clearbit.com/google.com" alt="AI Studio" />
+            AI Studio
+          </a>
+          <div class="rating">⭐⭐⭐</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Làm video -->
+    <div class="section" data-section="làm video">
+      <div class="section-title">🎬 Làm video</div>
+      <div class="ai-container">
+        <div class="ai-card" data-name="hailuoai">
+          <a href="https://hailuoai.video/" target="_blank">
+            <img src="https://logo.clearbit.com/hailuoai.video" alt="HailuoAI" />
+            Hailuo AI
+          </a>
+          <div class="rating">⭐⭐⭐</div>
+        </div>
+        <div class="ai-card" data-name="invideo">
+          <a href="https://invideo.io/" target="_blank">
+            <img src="https://logo.clearbit.com/invideo.io" alt="InVideo" />
+            InVideo
+          </a>
+          <div class="rating">⭐⭐⭐⭐</div>
+        </div>
+        <div class="ai-card" data-name="sora">
+          <a href="https://openai.com/sora" target="_blank">
+            <img src="https://logo.clearbit.com/openai.com" alt="Sora" />
+            Sora
+          </a>
+          <div class="rating">⭐⭐⭐⭐</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Làm nhạc -->
+    <div class="section" data-section="làm nhạc">
+      <div class="section-title">🎵 Làm nhạc</div>
+      <div class="ai-container">
+        <div class="ai-card" data-name="suno">
+          <a href="https://app.suno.ai/" target="_blank">
+            <img src="https://logo.clearbit.com/suno.ai" alt="Suno AI" />
+            Suno AI
+          </a>
+          <div class="rating">⭐⭐⭐⭐⭐</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Làm giọng nói -->
+    <div class="section" data-section="làm giọng nói">
+      <div class="section-title">🎙️ Làm giọng nói</div>
+      <div class="ai-container">
+        <div class="ai-card" data-name="d-id">
+          <a href="https://www.d-id.com/" target="_blank">
+            <img src="https://logo.clearbit.com/d-id.com" alt="D-ID" />
+            D-ID
+          </a>
+          <div class="rating">⭐⭐⭐</div>
+        </div>
+      </div>
+    </div>
   </div>
+
   <script>
     const searchBox = document.getElementById("searchBox");
     const sections = document.querySelectorAll(".section");
+
     searchBox.addEventListener("input", function () {
       const keyword = this.value.toLowerCase();
+
       sections.forEach(section => {
         const sectionName = section.getAttribute("data-section");
         const cards = section.querySelectorAll(".ai-card");
+
         let sectionVisible = false;
+
         cards.forEach(card => {
           const aiName = card.getAttribute("data-name");
           const match = aiName.includes(keyword) || sectionName.includes(keyword);
           card.style.display = match ? "block" : "none";
           if (match) sectionVisible = true;
         });
+
         section.style.display = sectionVisible ? "block" : "none";
       });
     });
