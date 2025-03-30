@@ -90,6 +90,23 @@
       display: block;
     }
 
+    .stars {
+      display: flex;
+      justify-content: center;
+      gap: 4px;
+      margin-top: 8px;
+    }
+
+    .star {
+      font-size: 20px;
+      cursor: pointer;
+      color: #888;
+    }
+
+    .star.selected {
+      color: gold;
+    }
+
     @media (max-width: 500px) {
       header h1 {
         font-size: 22px;
@@ -112,106 +129,7 @@
   </header>
 
   <div id="ai-sections">
-    <!-- Đặt vấn đề -->
-    <div class="section" data-section="đặt vấn đề">
-      <div class="section-title">🧠 Đặt vấn đề</div>
-      <div class="ai-container">
-        <div class="ai-card" data-name="chatgpt">
-          <a href="https://chat.openai.com/" target="_blank">
-            <img src="https://logo.clearbit.com/openai.com" alt="ChatGPT" />
-            ChatGPT
-          </a>
-        </div>
-        <div class="ai-card" data-name="grok">
-          <a href="https://grok.com" target="_blank">
-            <img src="https://play-lh.googleusercontent.com/dQRKhi30KpzG3gww3TdVLzyIAVuOAWylnAcgnEUxqfpm2A8dEt2sgApVvtKAy-DO8aI=w240-h480-rw" alt="Grok" />
-            Grok AI
-          </a>
-        </div>
-        <div class="ai-card" data-name="deepseek">
-          <a href="https://chat.deepseek.com/" target="_blank">
-            <img src="https://downloadr2.apkmirror.com/wp-content/uploads/2025/01/99/678773c147230_com.deepseek.chat.png" alt="DeepSeek AI" />
-            DeepSeek AI
-          </a>
-        </div>
-      </div>
-    </div>
-
-    <!-- Làm hình ảnh -->
-    <div class="section" data-section="làm hình ảnh">
-      <div class="section-title">🖼️ Làm hình ảnh</div>
-      <div class="ai-container">
-        <div class="ai-card" data-name="midjourney">
-          <a href="https://www.midjourney.com/" target="_blank">
-            <img src="https://logo.clearbit.com/midjourney.com" alt="Midjourney" />
-            Midjourney
-          </a>
-        </div>
-        <div class="ai-card" data-name="sora">
-          <a href="https://openai.com/sora" target="_blank">
-            <img src="https://logo.clearbit.com/openai.com" alt="Sora" />
-            Sora
-          </a>
-        </div>
-        <div class="ai-card" data-name="reveart">
-          <a href="https://preview.reve.art/app" target="_blank">
-            <img src="https://logo.clearbit.com/reve.art" alt="ReveArt" />
-            ReveArt
-          </a>
-        </div>
-      </div>
-    </div>
-
-    <!-- Làm video -->
-    <div class="section" data-section="làm video">
-      <div class="section-title">🎬 Làm video</div>
-      <div class="ai-container">
-        <div class="ai-card" data-name="hailuoai">
-          <a href="https://hailuoai.video/" target="_blank">
-            <img src="https://logo.clearbit.com/hailuoai.video" alt="HailuoAI" />
-            Hailuo AI
-          </a>
-        </div>
-        <div class="ai-card" data-name="invideo">
-          <a href="https://invideo.io/" target="_blank">
-            <img src="https://logo.clearbit.com/invideo.io" alt="InVideo" />
-            InVideo
-          </a>
-        </div>
-        <div class="ai-card" data-name="sora">
-          <a href="https://openai.com/sora" target="_blank">
-            <img src="https://logo.clearbit.com/openai.com" alt="Sora" />
-            Sora
-          </a>
-        </div>
-      </div>
-    </div>
-
-    <!-- Làm nhạc -->
-    <div class="section" data-section="làm nhạc">
-      <div class="section-title">🎵 Làm nhạc</div>
-      <div class="ai-container">
-        <div class="ai-card" data-name="suno">
-          <a href="https://app.suno.ai/" target="_blank">
-            <img src="https://logo.clearbit.com/suno.ai" alt="Suno AI" />
-            Suno AI
-          </a>
-        </div>
-      </div>
-    </div>
-
-    <!-- Làm giọng nói -->
-    <div class="section" data-section="làm giọng nói">
-      <div class="section-title">🎙️ Làm giọng nói</div>
-      <div class="ai-container">
-        <div class="ai-card" data-name="d-id">
-          <a href="https://www.d-id.com/" target="_blank">
-            <img src="https://logo.clearbit.com/d-id.com" alt="D-ID" />
-            D-ID
-          </a>
-        </div>
-      </div>
-    </div>
+    <!-- Nội dung sẽ được chèn ở đây -->
   </div>
 
   <script>
@@ -235,6 +153,31 @@
         });
 
         section.style.display = sectionVisible ? "block" : "none";
+      });
+    });
+
+    // Tạo đánh giá sao có thể chọn được
+    document.addEventListener("DOMContentLoaded", () => {
+      document.querySelectorAll('.ai-card').forEach(card => {
+        const ratingDiv = document.createElement('div');
+        ratingDiv.className = 'stars';
+
+        for (let i = 1; i <= 5; i++) {
+          const star = document.createElement('span');
+          star.className = 'star';
+          star.textContent = '★';
+
+          star.addEventListener('click', () => {
+            const stars = ratingDiv.querySelectorAll('.star');
+            stars.forEach((s, index) => {
+              s.classList.toggle('selected', index < i);
+            });
+          });
+
+          ratingDiv.appendChild(star);
+        }
+
+        card.appendChild(ratingDiv);
       });
     });
   </script>
