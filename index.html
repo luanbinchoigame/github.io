@@ -87,13 +87,10 @@
       color: #ffcb6b;
       font-weight: bold;
       text-decoration: none;
-      display: block;
-    }
-
-    .rating {
-      margin-top: 8px;
-      color: gold;
-      font-size: 18px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
     }
 
     @media (max-width: 500px) {
@@ -113,137 +110,170 @@
 </head>
 <body>
   <header>
-    <h1>📚 Kho Tàng Công Cụ AI</h1>
+   
+  <div id="ai-sections">
+    <h1>Kho Tàng Công Cụ AI</h1>
     <input type="text" id="searchBox" placeholder="🔍 Nhập tên AI hoặc mục để tìm...">
   </header>
 
   <div id="ai-sections">
     <!-- Đặt vấn đề -->
-    <div class="section" data-section="đặt vấn đề">
+     <div class="section" data-section="đặt vấn đề">
       <div class="section-title">🧠 Đặt vấn đề</div>
       <div class="ai-container">
         <div class="ai-card" data-name="chatgpt">
           <a href="https://chat.openai.com/" target="_blank">
             <img src="https://logo.clearbit.com/openai.com" alt="ChatGPT" />
-            ChatGPT
+            <span>ChatGPT</span>
+<p style="margin: 8px 0 0; font-size: 13px; color: #ccc;">Trò chuyện và hỗ trợ thông minh bằng ngôn ngữ tự nhiên.</p>
           </a>
-          <div class="rating">⭐⭐⭐⭐⭐</div>
         </div>
         <div class="ai-card" data-name="grok">
           <a href="https://grok.com" target="_blank">
             <img src="https://play-lh.googleusercontent.com/dQRKhi30KpzG3gww3TdVLzyIAVuOAWylnAcgnEUxqfpm2A8dEt2sgApVvtKAy-DO8aI=w240-h480-rw" alt="Grok" />
-            Grok AI
+            <span>Grok AI</span>
+<p style="margin: 8px 0 0; font-size: 13px; color: #ccc;">AI hài hước do X phát triển, cập nhật theo thời gian thực.</p>
           </a>
-          <div class="rating">⭐⭐⭐⭐</div>
         </div>
         <div class="ai-card" data-name="deepseek">
           <a href="https://chat.deepseek.com/" target="_blank">
             <img src="https://downloadr2.apkmirror.com/wp-content/uploads/2025/01/99/678773c147230_com.deepseek.chat.png" alt="DeepSeek AI" />
-            DeepSeek AI
+            <span>DeepSeek AI</span>
+<p style="margin: 8px 0 0; font-size: 13px; color: #ccc;">AI tiếng Trung mạnh mẽ, đọc hiểu và tạo nội dung kỹ thuật.</p>
           </a>
-          <div class="rating">⭐⭐⭐⭐</div>
         </div>
         <div class="ai-card" data-name="aistudio">
           <a href="https://aistudio.google.com/prompts/new_chat" target="_blank">
             <img src="https://logo.clearbit.com/google.com" alt="AI Studio" />
-            AI Studio
+            <span>AI Studio</span>
+<p style="margin: 8px 0 0; font-size: 13px; color: #ccc;">Công cụ AI từ Google, hỗ trợ sáng tạo nội dung nhanh chóng.</p>
           </a>
-          <div class="rating">⭐⭐⭐</div>
         </div>
       </div>
     </div>
 
-    <!-- Làm hình ảnh -->
-    <div class="section" data-section="làm hình ảnh">
-      <div class="section-title">🖼️ Làm hình ảnh</div>
-      <div class="ai-container">
-        <div class="ai-card" data-name="midjourney">
-          <a href="https://www.midjourney.com/" target="_blank">
-            <img src="https://logo.clearbit.com/midjourney.com" alt="Midjourney" />
-            Midjourney
-          </a>
-          <div class="rating">⭐⭐⭐⭐⭐</div>
-        </div>
-        <div class="ai-card" data-name="sora">
-          <a href="https://openai.com/sora" target="_blank">
-            <img src="https://logo.clearbit.com/openai.com" alt="Sora" />
-            Sora
-          </a>
-          <div class="rating">⭐⭐⭐⭐</div>
-        </div>
-        <div class="ai-card" data-name="reveart">
-          <a href="https://preview.reve.art/app" target="_blank">
-            <img src="https://logo.clearbit.com/reve.art" alt="ReveArt" />
-            ReveArt
-          </a>
-          <div class="rating">⭐⭐⭐</div>
-        </div>
-        <div class="ai-card" data-name="aistudio">
-          <a href="https://aistudio.google.com/prompts/new_chat" target="_blank">
-            <img src="https://logo.clearbit.com/google.com" alt="AI Studio" />
-            AI Studio
-          </a>
-          <div class="rating">⭐⭐⭐</div>
-        </div>
-      </div>
-    </div>
 
-    <!-- Làm video -->
-    <div class="section" data-section="làm video">
-      <div class="section-title">🎬 Làm video</div>
-      <div class="ai-container">
-        <div class="ai-card" data-name="hailuoai">
-          <a href="https://hailuoai.video/" target="_blank">
-            <img src="https://logo.clearbit.com/hailuoai.video" alt="HailuoAI" />
-            Hailuo AI
-          </a>
-          <div class="rating">⭐⭐⭐</div>
-        </div>
-        <div class="ai-card" data-name="invideo">
-          <a href="https://invideo.io/" target="_blank">
-            <img src="https://logo.clearbit.com/invideo.io" alt="InVideo" />
-            InVideo
-          </a>
-          <div class="rating">⭐⭐⭐⭐</div>
-        </div>
-        <div class="ai-card" data-name="sora">
-          <a href="https://openai.com/sora" target="_blank">
-            <img src="https://logo.clearbit.com/openai.com" alt="Sora" />
-            Sora
-          </a>
-          <div class="rating">⭐⭐⭐⭐</div>
-        </div>
-      </div>
+   <!-- Làm hình ảnh -->
+<div class="section" data-section="làm hình ảnh">
+  <div class="section-title">🖼️ Làm hình ảnh</div>
+  <div class="ai-container">
+    <div class="ai-card" data-name="midjourney">
+      <a href="https://www.midjourney.com/" target="_blank">
+        <img src="https://logo.clearbit.com/midjourney.com" alt="Midjourney" />
+        <span>Midjourney</span>
+        <p style="margin: 8px 0 0; font-size: 13px; color: #ccc;">Tạo hình ảnh sáng tạo, nghệ thuật từ văn bản với chất lượng cao.</p>
+      </a>
     </div>
-
-    <!-- Làm nhạc -->
-    <div class="section" data-section="làm nhạc">
-      <div class="section-title">🎵 Làm nhạc</div>
-      <div class="ai-container">
-        <div class="ai-card" data-name="suno">
-          <a href="https://app.suno.ai/" target="_blank">
-            <img src="https://logo.clearbit.com/suno.ai" alt="Suno AI" />
-            Suno AI
-          </a>
-          <div class="rating">⭐⭐⭐⭐⭐</div>
-        </div>
-      </div>
+    <div class="ai-card" data-name="sora">
+      <a href="https://openai.com/sora" target="_blank">
+        <img src="https://logo.clearbit.com/openai.com" alt="Sora" />
+        <span>Sora</span>
+        <p style="margin: 8px 0 0; font-size: 13px; color: #ccc;">AI tạo hình và video từ mô tả tự nhiên, đến từ OpenAI.</p>
+      </a>
     </div>
-
-    <!-- Làm giọng nói -->
-    <div class="section" data-section="làm giọng nói">
-      <div class="section-title">🎙️ Làm giọng nói</div>
-      <div class="ai-container">
-        <div class="ai-card" data-name="d-id">
-          <a href="https://www.d-id.com/" target="_blank">
-            <img src="https://logo.clearbit.com/d-id.com" alt="D-ID" />
-            D-ID
-          </a>
-          <div class="rating">⭐⭐⭐</div>
-        </div>
-      </div>
+    <div class="ai-card" data-name="reveart">
+      <a href="https://preview.reve.art/app" target="_blank">
+        <img src="https://logo.clearbit.com/reve.art" alt="ReveArt" />
+        <span>ReveArt</span>
+        <p style="margin: 8px 0 0; font-size: 13px; color: #ccc;">Tạo tranh AI mang phong cách nghệ thuật độc đáo và hiện đại.</p>
+      </a>
+    </div>
+    <div class="ai-card" data-name="aistudio">
+      <a href="https://aistudio.google.com/prompts/new_chat" target="_blank">
+        <img src="https://logo.clearbit.com/google.com" alt="AI Studio" />
+        <span>AI Studio</span>
+        <p style="margin: 8px 0 0; font-size: 13px; color: #ccc;">Công cụ AI của Google có thể tạo hình và nội dung theo prompt.</p>
+      </a>
     </div>
   </div>
+</div>
+
+    <!-- Làm video -->
+<div class="section" data-section="làm video">
+  <div class="section-title">🎬 Làm video</div>
+  <div class="ai-container">
+
+    <div class="ai-card" data-name="hailuoai">
+      <a href="https://hailuoai.video/" target="_blank">
+        <img src="https://logo.clearbit.com/hailuoai.video" alt="HailuoAI" />
+        <span>Hailuo AI</span>
+        <p style="margin: 8px 0 0; font-size: 13px; color: #ccc;">Tạo video nhanh chóng từ văn bản với phong cách hiện đại.</p>
+      </a>
+    </div>
+
+    <div class="ai-card" data-name="invideo">
+      <a href="https://invideo.io/" target="_blank">
+        <img src="https://logo.clearbit.com/invideo.io" alt="InVideo" />
+        <span>InVideo</span>
+        <p style="margin: 8px 0 0; font-size: 13px; color: #ccc;">Nền tảng chỉnh sửa video chuyên nghiệp, hỗ trợ AI sinh nội dung.</p>
+      </a>
+    </div>
+
+    <div class="ai-card" data-name="sora">
+      <a href="https://openai.com/sora" target="_blank">
+        <img src="https://logo.clearbit.com/openai.com" alt="Sora" />
+        <span>Sora</span>
+        <p style="margin: 8px 0 0; font-size: 13px; color: #ccc;">AI tạo video chân thực từ prompt, do OpenAI phát triển.</p>
+      </a>
+    </div>
+
+    <div class="ai-card" data-name="pika">
+      <a href="https://pika.art" target="_blank">
+        <img src="https://pikalabs.net/wp-content/uploads/2023/10/PikaLabs-icon.jpg" alt="Pika Labs" />
+        <span>Pika Labs</span>
+        <p style="margin: 8px 0 0; font-size: 13px; color: #ccc;">Tạo video hoạt hình và điện ảnh từ mô tả văn bản với hiệu ứng đỉnh cao.</p>
+      </a>
+    </div>
+
+    <div class="ai-card" data-name="runwayml">
+      <a href="https://runwayml.com" target="_blank">
+        <img src="https://logo.clearbit.com/runwayml.com" alt="Runway ML" />
+        <span>Runway ML</span>
+        <p style="margin: 8px 0 0; font-size: 13px; color: #ccc;">Tạo video chất lượng cao từ văn bản hoặc ảnh tĩnh với AI Gen-2.</p>
+      </a>
+    </div>
+
+    <div class="ai-card" data-name="synthesia">
+      <a href="https://www.synthesia.io" target="_blank">
+        <img src="https://logo.clearbit.com/synthesia.io" alt="Synthesia" />
+        <span>Synthesia</span>
+        <p style="margin: 8px 0 0; font-size: 13px; color: #ccc;">Tạo video với người ảo trình bày, dùng cho đào tạo và doanh nghiệp.</p>
+      </a>
+    </div>
+
+  </div>
+</div>
+
+
+   <!-- Làm nhạc -->
+<div class="section" data-section="làm nhạc">
+  <div class="section-title">🎵 Làm nhạc</div>
+  <div class="ai-container">
+    <div class="ai-card" data-name="suno">
+      <a href="https://app.suno.ai/" target="_blank">
+        <img src="https://logo.clearbit.com/suno.ai" alt="Suno AI" />
+        <span>Suno AI</span>
+        <p style="margin: 8px 0 0; font-size: 13px; color: #ccc;">Tạo nhạc có lời bằng AI chỉ trong vài giây, nhiều phong cách đa dạng.</p>
+      </a>
+    </div>
+  </div>
+</div>
+
+
+  <!-- Làm giọng nói -->
+<div class="section" data-section="làm giọng nói">
+  <div class="section-title">🎙️ Làm giọng nói</div>
+  <div class="ai-container">
+    <div class="ai-card" data-name="d-id">
+      <a href="https://www.d-id.com/" target="_blank">
+        <img src="https://logo.clearbit.com/d-id.com" alt="D-ID" />
+        <span>D-ID</span>
+        <p style="margin: 8px 0 0; font-size: 13px; color: #ccc;">Chuyển văn bản thành giọng nói tự nhiên và video khuôn mặt động.</p>
+      </a>
+    </div>
+  </div>
+</div>
+
 
   <script>
     const searchBox = document.getElementById("searchBox");
