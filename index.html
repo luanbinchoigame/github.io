@@ -117,79 +117,105 @@
   </header>
 
   <div id="ai-sections">
+
+<!-- AI Yêu Thích -->
+<div class="section" data-section="ai yêu thích">
+  <div class="section-title">🧡 AI Yêu Thích</div>
+  <div class="ai-container" id="favorite-container">
+    <!-- Sẽ được thêm tự động bằng JavaScript -->
+  </div>
+</div>
+
     <!-- Đặt vấn đề -->
-     <div class="section" data-section="đặt vấn đề">
-      <div class="section-title">🧠 Đặt vấn đề</div>
-      <div class="ai-container">
-        <div class="ai-card" data-name="chatgpt">
-          <a href="https://chat.openai.com/" target="_blank">
-            <img src="https://logo.clearbit.com/openai.com" alt="ChatGPT" />
-            <span>ChatGPT</span>
-<p style="margin: 8px 0 0; font-size: 13px; color: #ccc;">Trò chuyện và hỗ trợ thông minh bằng ngôn ngữ tự nhiên.</p>
-          </a>
-        </div>
-        <div class="ai-card" data-name="grok">
-          <a href="https://grok.com" target="_blank">
-            <img src="https://play-lh.googleusercontent.com/dQRKhi30KpzG3gww3TdVLzyIAVuOAWylnAcgnEUxqfpm2A8dEt2sgApVvtKAy-DO8aI=w240-h480-rw" alt="Grok" />
-            <span>Grok AI</span>
-<p style="margin: 8px 0 0; font-size: 13px; color: #ccc;">AI hài hước do X phát triển, cập nhật theo thời gian thực.</p>
-          </a>
-        </div>
-        <div class="ai-card" data-name="deepseek">
-          <a href="https://chat.deepseek.com/" target="_blank">
-            <img src="https://downloadr2.apkmirror.com/wp-content/uploads/2025/01/99/678773c147230_com.deepseek.chat.png" alt="DeepSeek AI" />
-            <span>DeepSeek AI</span>
-<p style="margin: 8px 0 0; font-size: 13px; color: #ccc;">AI tiếng Trung mạnh mẽ, đọc hiểu và tạo nội dung kỹ thuật.</p>
-          </a>
-        </div>
-        <div class="ai-card" data-name="aistudio">
-          <a href="https://aistudio.google.com/prompts/new_chat" target="_blank">
-            <img src="https://logo.clearbit.com/google.com" alt="AI Studio" />
-            <span>AI Studio</span>
-<p style="margin: 8px 0 0; font-size: 13px; color: #ccc;">Công cụ AI từ Google, hỗ trợ sáng tạo nội dung nhanh chóng.</p>
-          </a>
-        </div>
-      </div>
+<div class="section" data-section="đặt vấn đề">
+  <div class="section-title">🧠 Đặt vấn đề</div>
+  <div class="ai-container">
+
+    <div class="ai-card" data-name="chatgpt">
+      <a href="https://chat.openai.com/" target="_blank">
+        <img src="https://logo.clearbit.com/openai.com" alt="ChatGPT" />
+        <span>ChatGPT</span>
+        <p style="margin: 8px 0 0; font-size: 13px; color: #ccc;">Trò chuyện và hỗ trợ thông minh bằng ngôn ngữ tự nhiên.</p>
+        <button class="fav-btn" onclick="toggleFavorite(event, 'ChatGPT')">❤️</button>
+      </a>
     </div>
 
+    <div class="ai-card" data-name="grok">
+      <a href="https://grok.com" target="_blank">
+        <img src="https://play-lh.googleusercontent.com/dQRKhi30KpzG3gww3TdVLzyIAVuOAWylnAcgnEUxqfpm2A8dEt2sgApVvtKAy-DO8aI=w240-h480-rw" alt="Grok" />
+        <span>Grok AI</span>
+        <p style="margin: 8px 0 0; font-size: 13px; color: #ccc;">AI hài hước do X phát triển, cập nhật theo thời gian thực.</p>
+        <button class="fav-btn" onclick="toggleFavorite(event, 'Grok AI')">❤️</button>
+      </a>
+    </div>
 
-   <!-- Làm hình ảnh -->
+    <div class="ai-card" data-name="deepseek">
+      <a href="https://chat.deepseek.com/" target="_blank">
+        <img src="https://downloadr2.apkmirror.com/wp-content/uploads/2025/01/99/678773c147230_com.deepseek.chat.png" alt="DeepSeek AI" />
+        <span>DeepSeek AI</span>
+        <p style="margin: 8px 0 0; font-size: 13px; color: #ccc;">AI tiếng Trung mạnh mẽ, đọc hiểu và tạo nội dung kỹ thuật.</p>
+        <button class="fav-btn" onclick="toggleFavorite(event, 'DeepSeek AI')">❤️</button>
+      </a>
+    </div>
+
+    <div class="ai-card" data-name="aistudio">
+      <a href="https://aistudio.google.com/prompts/new_chat" target="_blank">
+        <img src="https://logo.clearbit.com/google.com" alt="AI Studio" />
+        <span>AI Studio</span>
+        <p style="margin: 8px 0 0; font-size: 13px; color: #ccc;">Công cụ AI từ Google, hỗ trợ sáng tạo nội dung nhanh chóng.</p>
+        <button class="fav-btn" onclick="toggleFavorite(event, 'AI Studio')">❤️</button>
+      </a>
+    </div>
+
+  </div>
+</div>
+
+<!-- Làm hình ảnh -->
 <div class="section" data-section="làm hình ảnh">
   <div class="section-title">🖼️ Làm hình ảnh</div>
   <div class="ai-container">
+
     <div class="ai-card" data-name="midjourney">
       <a href="https://www.midjourney.com/" target="_blank">
         <img src="https://logo.clearbit.com/midjourney.com" alt="Midjourney" />
         <span>Midjourney</span>
         <p style="margin: 8px 0 0; font-size: 13px; color: #ccc;">Tạo hình ảnh sáng tạo, nghệ thuật từ văn bản với chất lượng cao.</p>
+        <button class="fav-btn" onclick="toggleFavorite(event, 'Midjourney')">❤️</button>
       </a>
     </div>
+
     <div class="ai-card" data-name="sora">
       <a href="https://openai.com/sora" target="_blank">
         <img src="https://logo.clearbit.com/openai.com" alt="Sora" />
         <span>Sora</span>
         <p style="margin: 8px 0 0; font-size: 13px; color: #ccc;">AI tạo hình và video từ mô tả tự nhiên, đến từ OpenAI.</p>
+        <button class="fav-btn" onclick="toggleFavorite(event, 'Sora')">❤️</button>
       </a>
     </div>
+
     <div class="ai-card" data-name="reveart">
       <a href="https://preview.reve.art/app" target="_blank">
         <img src="https://logo.clearbit.com/reve.art" alt="ReveArt" />
         <span>ReveArt</span>
         <p style="margin: 8px 0 0; font-size: 13px; color: #ccc;">Tạo tranh AI mang phong cách nghệ thuật độc đáo và hiện đại.</p>
+        <button class="fav-btn" onclick="toggleFavorite(event, 'ReveArt')">❤️</button>
       </a>
     </div>
+
     <div class="ai-card" data-name="aistudio">
       <a href="https://aistudio.google.com/prompts/new_chat" target="_blank">
         <img src="https://logo.clearbit.com/google.com" alt="AI Studio" />
         <span>AI Studio</span>
         <p style="margin: 8px 0 0; font-size: 13px; color: #ccc;">Công cụ AI của Google có thể tạo hình và nội dung theo prompt.</p>
+        <button class="fav-btn" onclick="toggleFavorite(event, 'AI Studio')">❤️</button>
       </a>
     </div>
+
   </div>
 </div>
 
-    <!-- Làm video -->
-<div class="section" data-section="làm video">
+<!-- Làm video -->
+<div class="section" data-section="làm video"> 
   <div class="section-title">🎬 Làm video</div>
   <div class="ai-container">
 
@@ -198,6 +224,7 @@
         <img src="https://logo.clearbit.com/hailuoai.video" alt="HailuoAI" />
         <span>Hailuo AI</span>
         <p style="margin: 8px 0 0; font-size: 13px; color: #ccc;">Tạo video nhanh chóng từ văn bản với phong cách hiện đại.</p>
+        <button class="fav-btn" onclick="toggleFavorite(event, 'Hailuo AI')">❤️</button>
       </a>
     </div>
 
@@ -206,6 +233,7 @@
         <img src="https://logo.clearbit.com/invideo.io" alt="InVideo" />
         <span>InVideo</span>
         <p style="margin: 8px 0 0; font-size: 13px; color: #ccc;">Nền tảng chỉnh sửa video chuyên nghiệp, hỗ trợ AI sinh nội dung.</p>
+        <button class="fav-btn" onclick="toggleFavorite(event, 'InVideo')">❤️</button>
       </a>
     </div>
 
@@ -214,6 +242,7 @@
         <img src="https://logo.clearbit.com/openai.com" alt="Sora" />
         <span>Sora</span>
         <p style="margin: 8px 0 0; font-size: 13px; color: #ccc;">AI tạo video chân thực từ prompt, do OpenAI phát triển.</p>
+        <button class="fav-btn" onclick="toggleFavorite(event, 'Sora')">❤️</button>
       </a>
     </div>
 
@@ -222,6 +251,7 @@
         <img src="https://pikalabs.net/wp-content/uploads/2023/10/PikaLabs-icon.jpg" alt="Pika Labs" />
         <span>Pika Labs</span>
         <p style="margin: 8px 0 0; font-size: 13px; color: #ccc;">Tạo video hoạt hình và điện ảnh từ mô tả văn bản với hiệu ứng đỉnh cao.</p>
+        <button class="fav-btn" onclick="toggleFavorite(event, 'Pika Labs')">❤️</button>
       </a>
     </div>
 
@@ -230,6 +260,7 @@
         <img src="https://logo.clearbit.com/runwayml.com" alt="Runway ML" />
         <span>Runway ML</span>
         <p style="margin: 8px 0 0; font-size: 13px; color: #ccc;">Tạo video chất lượng cao từ văn bản hoặc ảnh tĩnh với AI Gen-2.</p>
+        <button class="fav-btn" onclick="toggleFavorite(event, 'Runway ML')">❤️</button>
       </a>
     </div>
 
@@ -238,11 +269,14 @@
         <img src="https://logo.clearbit.com/synthesia.io" alt="Synthesia" />
         <span>Synthesia</span>
         <p style="margin: 8px 0 0; font-size: 13px; color: #ccc;">Tạo video với người ảo trình bày, dùng cho đào tạo và doanh nghiệp.</p>
+        <button class="fav-btn" onclick="toggleFavorite(event, 'Synthesia')">❤️</button>
       </a>
     </div>
 
   </div>
 </div>
+
+
 <!-- Upscale hình ảnh -->
 <div class="section" data-section="upscale hình ảnh">
   <div class="section-title">🧩 Upscale hình ảnh</div>
@@ -253,6 +287,7 @@
         <img src="https://logo.clearbit.com/topazlabs.com" alt="Topaz Gigapixel AI" />
         <span>Topaz Gigapixel AI</span>
         <p style="margin: 8px 0 0; font-size: 13px; color: #ccc;">Nâng cấp hình ảnh lên 2K, 4K, 8K siêu sắc nét bằng AI cao cấp.</p>
+        <button class="fav-btn" onclick="toggleFavorite(event, 'Topaz Gigapixel AI')">❤️</button>
       </a>
     </div>
 
@@ -261,6 +296,7 @@
         <img src="https://logo.clearbit.com/letsenhance.io" alt="Let's Enhance" />
         <span>Let's Enhance</span>
         <p style="margin: 8px 0 0; font-size: 13px; color: #ccc;">Tăng độ phân giải hình ảnh nhanh chóng, phù hợp cho thiết kế và in ấn.</p>
+        <button class="fav-btn" onclick="toggleFavorite(event, 'Let\'s Enhance')">❤️</button>
       </a>
     </div>
 
@@ -269,6 +305,7 @@
         <img src="https://logo.clearbit.com/upscalepics.com" alt="UpscalePics" />
         <span>UpscalePics</span>
         <p style="margin: 8px 0 0; font-size: 13px; color: #ccc;">Tăng kích thước và độ nét ảnh online, không cần cài phần mềm.</p>
+        <button class="fav-btn" onclick="toggleFavorite(event, 'UpscalePics')">❤️</button>
       </a>
     </div>
 
@@ -277,12 +314,12 @@
         <img src="https://logo.clearbit.com/remini.ai" alt="Remini Web" />
         <span>Remini Web</span>
         <p style="margin: 8px 0 0; font-size: 13px; color: #ccc;">Làm rõ ảnh cũ, ảnh mờ bằng AI phục hồi chi tiết khuôn mặt.</p>
+        <button class="fav-btn" onclick="toggleFavorite(event, 'Remini Web')">❤️</button>
       </a>
     </div>
 
   </div>
 </div>
-
 
    <!-- Làm nhạc -->
 <div class="section" data-section="làm nhạc">
@@ -293,6 +330,7 @@
         <img src="https://logo.clearbit.com/suno.ai" alt="Suno AI" />
         <span>Suno AI</span>
         <p style="margin: 8px 0 0; font-size: 13px; color: #ccc;">Tạo nhạc có lời bằng AI chỉ trong vài giây, nhiều phong cách đa dạng.</p>
+        <button class="fav-btn" onclick="toggleFavorite(event, 'Suno AI')">❤️</button>
       </a>
     </div>
   </div>
@@ -303,40 +341,86 @@
 <div class="section" data-section="làm giọng nói">
   <div class="section-title">🎙️ Làm giọng nói</div>
   <div class="ai-container">
+
     <div class="ai-card" data-name="d-id">
       <a href="https://www.d-id.com/" target="_blank">
         <img src="https://logo.clearbit.com/d-id.com" alt="D-ID" />
         <span>D-ID</span>
         <p style="margin: 8px 0 0; font-size: 13px; color: #ccc;">Chuyển văn bản thành giọng nói tự nhiên và video khuôn mặt động.</p>
+        <button class="fav-btn" onclick="toggleFavorite(event, 'D-ID')">❤️</button>
       </a>
     </div>
+
+    <div class="ai-card" data-name="elevenlabs">
+      <a href="https://www.elevenlabs.io" target="_blank">
+        <img src="https://logo.clearbit.com/elevenlabs.io" alt="ElevenLabs" />
+        <span>ElevenLabs</span>
+        <p style="margin: 8px 0 0; font-size: 13px; color: #ccc;">Tạo và nhân bản giọng nói cực kỳ tự nhiên với cảm xúc chân thật.</p>
+        <button class="fav-btn" onclick="toggleFavorite(event, 'ElevenLabs')">❤️</button>
+      </a>
+    </div>
+
+    <div class="ai-card" data-name="playht">
+      <a href="https://play.ht" target="_blank">
+        <img src="https://logo.clearbit.com/play.ht" alt="PlayHT" />
+        <span>PlayHT</span>
+        <p style="margin: 8px 0 0; font-size: 13px; color: #ccc;">Chuyển văn bản thành giọng nói rõ ràng, tự nhiên, hỗ trợ nhiều ngôn ngữ.</p>
+        <button class="fav-btn" onclick="toggleFavorite(event, 'PlayHT')">❤️</button>
+      </a>
+    </div>
+
+    <div class="ai-card" data-name="resembleai">
+      <a href="https://www.resemble.ai" target="_blank">
+        <img src="https://logo.clearbit.com/resemble.ai" alt="Resemble AI" />
+        <span>Resemble AI</span>
+        <p style="margin: 8px 0 0; font-size: 13px; color: #ccc;">Tạo giọng nói cho game, phim, ứng dụng với công nghệ voice AI tiên tiến.</p>
+        <button class="fav-btn" onclick="toggleFavorite(event, 'Resemble AI')">❤️</button>
+      </a>
+    </div>
+
   </div>
 </div>
 
 
   <script>
-    const searchBox = document.getElementById("searchBox");
-    const sections = document.querySelectorAll(".section");
+  const favoriteKey = 'favorite_ai_tools';
 
-    searchBox.addEventListener("input", function () {
-      const keyword = this.value.toLowerCase();
+  function toggleFavorite(event, toolName) {
+    event.preventDefault();
+    event.stopPropagation();
 
-      sections.forEach(section => {
-        const sectionName = section.getAttribute("data-section");
-        const cards = section.querySelectorAll(".ai-card");
+    let favorites = JSON.parse(localStorage.getItem(favoriteKey)) || [];
 
-        let sectionVisible = false;
+    if (favorites.includes(toolName)) {
+      favorites = favorites.filter(name => name !== toolName);
+    } else {
+      favorites.push(toolName);
+    }
 
-        cards.forEach(card => {
-          const aiName = card.getAttribute("data-name");
-          const match = aiName.includes(keyword) || sectionName.includes(keyword);
-          card.style.display = match ? "block" : "none";
-          if (match) sectionVisible = true;
-        });
+    localStorage.setItem(favoriteKey, JSON.stringify(favorites));
+    renderFavorites();
+  }
 
-        section.style.display = sectionVisible ? "block" : "none";
-      });
-    });
-  </script>
-</body>
-</html>
+  function renderFavorites() {
+  const favContainer = document.getElementById("favorite-container");
+  const allCards = document.querySelectorAll(".ai-card");
+  const favorites = JSON.parse(localStorage.getItem(favoriteKey)) || [];
+
+  favContainer.innerHTML = '';
+  const rendered = new Set();
+
+  allCards.forEach(card => {
+    const name = card.getAttribute("data-name");
+    const label = card.querySelector("span")?.textContent || name;
+
+    if (favorites.includes(label) && !rendered.has(label)) {
+      favContainer.appendChild(card.cloneNode(true));
+      rendered.add(label);
+    }
+  });
+}
+
+
+  // Tự động hiển thị yêu thích khi load
+  document.addEventListener("DOMContentLoaded", renderFavorites);
+</script>
